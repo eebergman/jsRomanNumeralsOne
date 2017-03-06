@@ -1,0 +1,20 @@
+{
+  "name": "roman-numerals-one",
+  "version": "1.0.0",
+  "main": "roman_numerals.js",
+  "repository": {},
+  "author": "Erin Bergman <ebergman@pillartechnology.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "_mocha --recursive",
+    "lint": "eslint .",
+    "coverage": "istanbul cover _mocha"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.17.0",
+    "eslint-config-google": "^0.7.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0"
+  }
+}
