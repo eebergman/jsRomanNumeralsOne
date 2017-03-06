@@ -9,12 +9,20 @@ describe("The file roman_numerals.js should exist", () => {
 });
 
 
-describe("roman_numerals translates from arabic numbers to roman", () => {
+describe("roman_numerals translates from arabic numbers to roman; ten and under", () => {
     it("should return an 'I' when given 1", () =>{
         expect(ro_num_translate(1)).to.equal("I");
     });
 
-    it("should return 'II' when given 2", () => {
-        expect(ro_num_translate(2)).to.equal("II");
-    })
+    it("should return 'III' when given 3", () => {
+        expect(ro_num_translate(3)).to.equal("III");
+    });
+
+    it("should return 'IV' when given 4", () => {
+        expect(ro_num_translate(4)).to.equal("IV");
+    });
+
+    it("should return 'V' when given 5", () => {
+        expect(ro_num_translate(5)).to.equal("V");
+    });
 });

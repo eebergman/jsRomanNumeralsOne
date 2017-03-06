@@ -1,5 +1,7 @@
 let translateToRoman = function (numeral) {
     const romans = {
+        "V": 5,
+        "IV": 4,
         "I": 1
     };
 
@@ -18,4 +20,4 @@ let translateToRoman = function (numeral) {
 
 module.exports = {
     translateToRoman: translateToRoman
-}
+};

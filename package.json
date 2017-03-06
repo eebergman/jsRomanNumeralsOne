@@ -8,7 +8,8 @@
   "scripts": {
     "test": "_mocha --recursive",
     "lint": "eslint .",
-    "coverage": "istanbul cover _mocha"
+    "coverage": "istanbul cover _mocha",
+    "all": "istanbul cover _mocha; eslint .; _mocha --recursive"
   },
   "devDependencies": {
     "chai": "^3.5.0",
