@@ -1,5 +1,16 @@
+const err = new ReferenceError("Input has no Roman equivalent.");
+
 let translateToRoman = function (numeral) {
+    if(numeral <= 0 || numeral >= 4000) {
+        throw err;
+    }
+
     const romans = {
+        "M": 1000,
+        "CM": 900,
+        "D": 500,
+        "CD": 400,
+        "C": 100,
         "XC": 90,
         "L": 50,
         "XL": 40,

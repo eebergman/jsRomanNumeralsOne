@@ -9,7 +9,7 @@ describe("The file roman_numerals.js should exist", () => {
 });
 
 
-describe("roman_numerals translates from arabic numbers to roman; under ten", () => {
+describe("roman_numerals translates from arabic numbers to roman; 1 to 9", () => {
     it("should return an 'I' when given 1", () => {
         expect(ro_num_translate(1)).to.equal("I");
     });
@@ -39,7 +39,7 @@ describe("roman_numerals translates from arabic numbers to roman; under ten", ()
     });
 });
 
-describe("roman_numerals translates from arabic numbers to roman; ten to 100", () => {
+describe("roman_numerals translates from arabic numbers to roman; 10 to 90", () => {
     it("should return 'X' when given 10", () => {
         expect(ro_num_translate(10)).to.equal("X");
     });
@@ -55,10 +55,53 @@ describe("roman_numerals translates from arabic numbers to roman; ten to 100", (
     it("should return 'XC' when given 90", () => {
         expect(ro_num_translate(90)).to.equal("XC");
     });
+
+    it("should return 'XC' when given 90", () => {
+        expect(ro_num_translate(90)).to.equal("XC");
+    });
+});
+
+describe("roman_numerals translates from arabic numbers to roman; 100 to 3999", () => {
+    it("should return 'C' when given 100", () => {
+        expect(ro_num_translate(100)).to.equal("C");
+    });
+
+    it("should return 'CD' when given 400", () => {
+        expect(ro_num_translate(400)).to.equal("CD");
+    });
+
+    it("should return 'D' when given 500", () => {
+        expect(ro_num_translate(500)).to.equal("D");
+    });
+
+    it("should return 'CM' when given 900", () => {
+        expect(ro_num_translate(900)).to.equal("CM");
+    });
+
+    it("should return 'M' when given 1000", () => {
+        expect(ro_num_translate(1000)).to.equal("M");
+    });
+
+    it("should return 'MMMCMXCIX' when given 3999", () => {
+        expect(ro_num_translate(3999)).to.equal("MMMCMXCIX");
+    });
 });
 
 describe("Boundary tests", () => {
     it("should not return 'x' lowercase when given 10", () => {
         expect(ro_num_translate(10)).to.not.equal("x");
     });
+
+    it("should error out when given 0", () => {
+        expect(() => {
+            ro_num_translate(0);
+        }).to.throw("Input has no Roman equivalent.");
+    });
+
+    it("should error out when given a number greater than 3999", () => {
+        expect(() => {
+            ro_num_translate(4000);
+        }).to.throw("Input has no Roman equivalent.");
+    });
+
 });
